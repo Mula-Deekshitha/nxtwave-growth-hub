@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>60 Minutes. 1 Project. 1 Campus. | Growth Hub</title>
+<style>
+:root{--ink:#14213d;--muted:#62708a;--blue:#3b5bdb;--teal:#0f9d8a;--bg:#f5f7fc;--line:#e2e8f0;--orange:#ffb454}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial}
+header{background:linear-gradient(120deg,#101c3b,#263f86);color:white;padding:28px 20px 36px}
+.wrap{max-width:1080px;margin:auto}.top{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.brand{font-weight:800;letter-spacing:.2px}.pill{border:1px solid #ffffff55;border-radius:999px;padding:6px 10px;font-size:12px;color:#e6ecff}
+.hero{display:grid;grid-template-columns:1.4fr .8fr;gap:28px;align-items:center;padding-top:34px}
+h1{font-size:clamp(32px,5vw,52px);line-height:1.04;letter-spacing:-1.5px;margin:10px 0 14px}.hero p{color:#dce5ff;max-width:600px;font-size:17px}
+.cta{display:inline-block;background:var(--orange);color:#242b42;font-weight:800;border:0;border-radius:12px;padding:12px 17px;text-decoration:none;cursor:pointer}
+.metricbox{background:#ffffff12;border:1px solid #ffffff30;border-radius:20px;padding:22px}
+.metricbox strong{display:block;font-size:40px;line-height:1.1}.metricbox small{color:#dce5ff}
+main{padding:24px 20px 50px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:-4px}
+.stat,.panel{background:white;border:1px solid var(--line);border-radius:17px;padding:18px;box-shadow:0 5px 20px #14213d08}
+.stat span{font-size:12px;color:var(--muted)}.stat strong{display:block;font-size:26px;margin-top:5px}
+.layout{display:grid;grid-template-columns:1.05fr .95fr;gap:16px;margin-top:18px}.panel h2{font-size:20px;margin:0 0 5px}.sub{color:var(--muted);font-size:13px;margin:0 0 16px}
+label{display:block;font-size:13px;font-weight:700;margin:12px 0 5px}input,select{width:100%;padding:11px 12px;border:1px solid #cfd8e7;border-radius:10px;background:#fff;color:var(--ink);font:inherit}input:focus,select:focus{outline:2px solid #9eafff;border-color:var(--blue)}
+.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.btn{width:100%;border:0;background:var(--blue);color:white;font-weight:800;border-radius:11px;padding:12px;margin-top:16px;cursor:pointer}.btn:hover{filter:brightness(.95)}
+.notice{background:#eefbf7;border:1px solid #c5f0e5;color:#146858;padding:11px;border-radius:10px;font-size:13px;margin-top:12px;display:none}
+.code{background:#f1f4ff;border:1px dashed #8ca1f5;padding:14px;border-radius:12px;display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:12px}
+.code strong{font-size:21px;letter-spacing:1px}.copy{border:1px solid #cbd5f5;background:white;border-radius:8px;padding:7px 10px;cursor:pointer;font-weight:700}
+.progress{height:10px;border-radius:99px;background:#e9edf6;overflow:hidden;margin:12px 0}.progress div{height:100%;width:0;background:linear-gradient(90deg,var(--teal),#79d8bc);transition:width .3s}
+.small{font-size:12px;color:var(--muted)}.table{width:100%;border-collapse:collapse;margin-top:8px}.table th,.table td{text-align:left;padding:10px 6px;border-bottom:1px solid var(--line);font-size:13px}.table th{color:var(--muted);font-weight:700}
+.rank{display:inline-grid;place-items:center;background:#eef2ff;color:#3b5bdb;border-radius:8px;width:27px;height:27px;font-weight:800}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}.step{padding:15px;border-radius:14px;background:#fff;border:1px solid var(--line)}.step b{display:block;margin:8px 0 4px}.step p{font-size:13px;color:var(--muted);margin:0}.num{background:#e8edff;color:var(--blue);border-radius:8px;padding:5px 8px;display:inline-block;font-weight:800}
+footer{color:var(--muted);font-size:12px;text-align:center;padding:22px}
+@media(max-width:760px){.hero,.layout{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.formgrid{grid-template-columns:1fr}.metricbox strong{font-size:32px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="top"><div class="brand">NxtWave × AI BUILD SPRINT</div><div class="pill">DEMO PROTOTYPE · SIMULATED DATA</div></div>
+  <div class="hero"><div>
+    <div class="pill">FREE ONLINE WORKSHOP · 60 MINUTES</div>
+    <h1>60 Minutes.<br>1 Project.<br>1 Campus.</h1>
+    <p>Stop saving AI tutorials for “later”. Build your first small AI project in one guided session—and bring your friends along.</p>
+    <a class="cta" href="#register">Claim a free seat ↓</a>
+  </div><div class="metricbox"><small>CAMPAIGN NORTH STAR</small><strong id="heroCount">0 / 500</strong><p style="margin:8px 0 0">student registrations toward the challenge goal</p><div class="progress"><div id="heroProgress"></div></div><small>Illustrative prototype counter; real campaign needs a connected database.</small></div></div>
+</div></header>
+<main class="wrap">
+  <div class="stats">
+    <div class="stat"><span>YOUR REFERRALS IN THIS DEMO</span><strong id="refCount">0</strong></div>
+    <div class="stat"><span>CAMPAIGN TARGET</span><strong>500 students</strong></div>
+    <div class="stat"><span>REGISTRATION COST TARGET</span><strong>≤ ₹4</strong></div>
+  </div>
+  <div class="layout">
+    <section class="panel" id="register">
+      <h2>Reserve your seat</h2><p class="sub">Quick signup, then get a personal referral code to invite classmates.</p>
+      <form id="signup">
+        <label for="name">Full name</label><input id="name" required placeholder="e.g., Ananya Rao">
+        <div class="formgrid"><div><label for="email">College email</label><input id="email" type="email" required placeholder="you@college.edu"></div>
+        <div><label for="year">Study year</label><select id="year" required><option value="">Choose year</option><option>Final year</option><option>Pre-final year</option><option>Other</option></select></div></div>
+        <div class="formgrid"><div><label for="college">College</label><input id="college" required placeholder="College name"></div>
+        <div><label for="source">How did you hear?</label><select id="source" required><option value="">Choose source</option><option>Class representative</option><option>WhatsApp group</option><option>College club</option><option>Friend referral</option><option>LinkedIn / Instagram</option><option>Email</option></select></div></div>
+        <label for="referrer">Referral code (optional)</label><input id="referrer" placeholder="Enter a friend's code">
+        <button class="btn" type="submit">Register for the free workshop</button>
+        <div class="notice" id="notice" role="status"></div>
+      </form>
+      <div id="personalCode" style="display:none">
+        <div class="code"><div><span class="small">YOUR PERSONAL INVITE CODE</span><br><strong id="codeText"></strong></div><button class="copy" id="copyBtn" type="button">Copy code</button></div>
+        <p class="small">Share this with classmates. In this prototype, registrations are stored only in this browser.</p>
+      </div>
+    </section>
+    <section class="panel">
+      <h2>Campus Relay leaderboard</h2><p class="sub">Recognise helpful connectors—not just the loudest promoters. Demo entries are illustrative.</p>
+      <table class="table"><thead><tr><th>Rank</th><th>Campus connector</th><th>Referrals</th></tr></thead><tbody id="leaderboard">
+      <tr><td><span class="rank">1</span></td><td>Demo Campus A</td><td>12</td></tr>
+      <tr><td><span class="rank">2</span></td><td>Demo Campus B</td><td>9</td></tr>
+      <tr><td><span class="rank">3</span></td><td>Demo Campus C</td><td>7</td></tr></tbody></table>
+      <div style="background:#fff8e9;border:1px solid #ffe2a8;border-radius:12px;padding:13px;margin-top:16px"><b>Growth loop</b><p class="small" style="margin:5px 0 0">Student registers → gets a code → shares in relevant class groups → friends register → source/referral data shows which campus channels work.</p></div>
+      <p class="small" style="margin-top:14px">For a production version: connect the form to Google Sheets or a database, validate unique emails, and calculate referrals from verified registrations.</p>
+    </section>
+  </div>
+  <div class="steps">
+    <div class="step"><span class="num">01</span><b>Build confidence</b><p>A clear promise: leave with a small working AI project, not just theory.</p></div>
+    <div class="step"><span class="num">02</span><b>Make sharing useful</b><p>Give every registrant a trackable invite code and a ready-to-send message.</p></div>
+    <div class="step"><span class="num">03</span><b>Learn every day</b><p>Review source-wise registrations, double down on what converts, and stop low-yield activity.</p></div>
+  </div>
+</main>
+<footer>Concept prototype for the NxtWave Growth Intern challenge · No real registration is submitted.</footer>
+<script>
+const $=id=>document.getElementById(id);
+const KEY='nxtwaveGrowthDemo_v1';
+function load(){try{return JSON.parse(localStorage.getItem(KEY))||{registrations:[]}}catch(e){return {registrations:[]}}}
+function save(d){localStorage.setItem(KEY,JSON.stringify(d))}
+function update(){
+ const d=load();const n=d.registrations.length;
+ $('heroCount').textContent=Math.min(n,500)+' / 500';$('heroProgress').style.width=Math.min(100,n/5)+'%';
+ $('refCount').textContent=d.registrations.filter(r=>r.referrer).length;
+}
+$('signup').addEventListener('submit',e=>{
+ e.preventDefault();const d=load();const email=$('email').value.trim().toLowerCase();
+ if(d.registrations.some(r=>r.email===email)){ $('notice').style.display='block';$('notice').textContent='This email is already registered in this browser demo.';return;}
+ const code='BUILD'+Math.random().toString(36).slice(2,6).toUpperCase();
+ const rec={name:$('name').value.trim(),email,year:$('year').value,college:$('college').value.trim(),source:$('source').value,referrer:$('referrer').value.trim().toUpperCase(),code};
+ d.registrations.push(rec);save(d);
+ $('notice').style.display='block';$('notice').textContent='Demo registration recorded! Your personal invite code is ready.';
+ $('personalCode').style.display='block';$('codeText').textContent=code;
+ $('signup').reset();update();
+});
+$('copyBtn').addEventListener('click',async()=>{
+ const text='Join me for NxtWave’s free “Build Your First AI Project in 60 Minutes” workshop. Register and use my code '+$('codeText').textContent+'.';
+ try{await navigator.clipboard.writeText(text);$('copyBtn').textContent='Copied!'}catch(e){window.prompt('Copy this invite message:',text)}
+});
+update();
+</script>
+</body></html>
